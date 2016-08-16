@@ -22,7 +22,7 @@ extension MSSticker {
     
     public convenience init(images: [UIImage], frameDelay: CGFloat, numberOfLoops: Int, localizedDescription: String){
         let cacheURL: URL
-        let fileManager = FileManager.default()
+        let fileManager = FileManager.default
         let directoryName = UUID().uuidString
         let tempPath = NSTemporaryDirectory()
         

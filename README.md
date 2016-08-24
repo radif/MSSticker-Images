@@ -7,7 +7,7 @@ Initializes a new animated sticker with an array of images and animation setting
 
     ...populate
 
-    let sticker :MSSticker
+    let sticker: MSSticker
     do {
       try sticker=MSSticker(images: images, format: .apng, frameDelay: 1.0/14.0, numberOfLoops: 0, localizedDescription: localizedDescription)
     }catch MSStickerAnimationInputError.InvalidDimensions {

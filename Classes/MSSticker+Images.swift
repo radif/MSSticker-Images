@@ -40,12 +40,7 @@ extension MSSticker {
          }catch MSStickerAnimationInputError.InvalidStickerFileSize {
          try! sticker=MSSticker(contentsOfFileURL: urlForImageName("invalid_file_size"), localizedDescription: "invalid file size")
          
-         } catch {
-         fatalError("other error:\(error)")
-         }
-
-     
-     
+         } catch { fatalError("other error:\(error)") }
      */
     
     public convenience init(images: [UIImage], format:MSStickerAnimationFormat, frameDelay: CGFloat, numberOfLoops: Int, localizedDescription: String) throws{

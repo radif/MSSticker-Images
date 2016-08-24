@@ -14,14 +14,11 @@ Initializes a new animated sticker with an array of images and animation setting
 
     let sticker :MSSticker
     do {
-    try sticker=MSSticker(images: images, format: .apng, frameDelay: 1.0/14.0, numberOfLoops: 0, localizedDescription: localizedDescription)
-
+      try sticker=MSSticker(images: images, format: .apng, frameDelay: 1.0/14.0, numberOfLoops: 0, localizedDescription: localizedDescription)
     }catch MSStickerAnimationInputError.InvalidDimensions {
-    try! sticker=MSSticker(contentsOfFileURL:  urlForImageName("invalid_image_size"), localizedDescription: "invalid dimensions")
-
+      try! sticker=MSSticker(contentsOfFileURL:  urlForImageName("invalid_image_size"), localizedDescription: "invalid dimensions")
     }catch MSStickerAnimationInputError.InvalidStickerFileSize {
-    try! sticker=MSSticker(contentsOfFileURL: urlForImageName("invalid_file_size"), localizedDescription: "invalid file size")
-
+      try! sticker=MSSticker(contentsOfFileURL: urlForImageName("invalid_file_size"), localizedDescription: "invalid file size")
     } catch { fatalError("other error:\(error)") }
 ```
 1. insert `#import "mcbAnimatedImagePersister.h"` into your swift bridging header

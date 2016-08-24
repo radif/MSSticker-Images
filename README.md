@@ -25,6 +25,6 @@ Initializes a new animated sticker with an array of images and animation setting
 2. frameDelay aka frame rate
 3. numberOfLoops: 0 = forever
 
-The current limitation imposed by Apple is 500kb file size and the image dimensions varying 300x300 to 618-618 px. The initializer will throw .InvalidDimensions or .InvalidStickerFileSize if the conditions are not met
+The current limitation imposed by Apple is 500kb file size and the image dimensions varying from 300x300 to 618-618 px. The initializer will throw MSStickerAnimationInputError: .InvalidDimensions or .InvalidStickerFileSize if the conditions are not met.
 
 To familarize yourself with the use case, see the example project, particularly, files: ExampleCollectionViewCell.swift, MessagesViewController.swift, StickerData.swift

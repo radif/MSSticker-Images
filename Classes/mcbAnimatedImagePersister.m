@@ -10,7 +10,7 @@
 #import <MobileCoreServices/MobileCoreServices.h>
 
 @implementation mcbAnimatedImagePersister
-+(instancetype)sharedInstance{
++(instancetype)shared{
     static mcbAnimatedImagePersister * instance=nil;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{

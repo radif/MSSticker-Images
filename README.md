@@ -3,11 +3,6 @@ Initializes a new animated sticker with an array of images and animation setting
 
 # Usage:
 ```swift
-  var images = [UIImage]()
-  //...populate
-  let sticker = MSSticker(images: images, frameDelay: 1.0/14.0, numberOfLoops: 0, localizedDescription: "generated sticker")
-
-
     var images = [UIImage]()
 
     ...populate

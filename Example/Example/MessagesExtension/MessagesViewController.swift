@@ -19,21 +19,21 @@ class MessagesViewController: MSMessagesAppViewController, UICollectionViewDeleg
         
         //generate stickers
         
-        let generate = { [weak self] (name:String, maxFrame:Int) in
+        let generate = { [weak self] (imageName:String, maxFrame:Int, localizedDescription:String) in
             var images = [String]()
             for i in (1...maxFrame){
-                images.append(String.init(format: "%@%02d", name, i))
+                images.append(String.init(format: "%@%02d", imageName, i))
             }
-            self?._stickers.append(StickerData(images: images, name: "elephant1", fps:14))
+            self?._stickers.append(StickerData(images: images, name: localizedDescription, fps:14))
         }
         
         
-        generate("elephant", 34)
-        generate("elephant_big", 6)
+        generate("elephant", 34, "test_big_filesize")
+        generate("elephant_big", 6, "test_big_image_frame")
 
         
-        for _ in (0...100){
-            generate("elephant", 18)
+        for i in (0...100){
+            generate("elephant", 18, "test_\(i)")
         }
         
         
